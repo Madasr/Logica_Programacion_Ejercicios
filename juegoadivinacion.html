@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<h1>Programa juego de Lotería</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sorteo(n) {
+        return Math.round(Math.random()*n);
+    }
+
+    var numeroPensado = sorteo(10);
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+
+    if(numeroLanzado >10) {
+        imprimir("Ejecutar de nuevo, debes ingresar numeros entre 0-10");
+    }
+    else if(numeroPensado == numeroLanzado) {
+        imprimir("Usted gano la Lotería");
+    }
+    else if(numeroPensado < numeroLanzado){
+        imprimir("Perdió, el número ganador es " + numeroPensado + ", el número es menor al ingresado");
+    }
+    else {
+        imprimir("Perdió, el número ganador es " + numeroPensado + ", el número es mayor al ingresado");
+    }
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+   <meta charset="UTF-8">
+    <H1>ESTRELLAS</H1>
+    
+    <script>
+        
+        function saltarlinea() {
+            
+            document.write("<br>");
+            
+        }
+        
+        function imprimir(frase) {
+           
+            document.write(frase);
+            saltarlinea();
+            
+        }
+        
+        
+        for (var lineas = 1; lineas <=3; lineas++) {
+            
+            for (var columnas = 1; columnas <= 10; columnas++){
+                
+                document.write("*");
+          
+            }
+            
+            saltarlinea();
+      
+        }
+        
+        saltarlinea();
+        saltarlinea();
+        
+        imprimir("fin");
+        
+    
+    
+    </script>   
